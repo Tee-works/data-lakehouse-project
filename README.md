@@ -8,7 +8,7 @@ The Data Lakehouse Project integrates the flexibility of a data lake with the pe
 
 ## Architecture Diagram
 
-![Data Lakehouse Architecture](data-lakehouse-project/architecture_diagram.png)
+![Data Lakehouse Architecture](architecture_diagram.png)
 
 This architecture diagram outlines the components involved in the data lakehouse setup, from data ingestion and storage in AWS S3 to data transformation and processing using Apache Iceberg, dbt, and Starburst Trino.
 
@@ -22,7 +22,7 @@ The project uses synthetic datasets that simulate real-world scenarios to analyz
 
 ### Dataset Schema
 
-![Data Schema](data-lakehouse-project/screenshots/data_schema.png)
+![Data Schema](screenshots/data_schema.png)
 
 
 ## Tech Stack
