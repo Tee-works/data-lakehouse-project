@@ -84,9 +84,9 @@ Data Quality Checks: Implement schema tests and custom tests to ensure data inte
 6. Documentation and Lineage
 dbt Docs: Generate and visualize data lineage using dbt docs to understand the flow of data through different models.
 
-![Data Lineage](screenshots/data_lineage.png)
+![Data Lineage](screenshots/data_lineage.jpg)
 
 ## Future Enhancements
-Machine Learning Integration: Plan to integrate machine learning models for predictive analytics and real-time decision-making.
-Real-Time Data Processing: Implement real-time or near-real-time data ingestion and processing capabilities.
-Data Security and Governance: Enhance security and governance frameworks to comply with industry standards.
+1. Machine Learning Integration: Plan to integrate machine learning models for predictive analytics and real-time decision-making.
+2. Real-Time Data Processing: Implement real-time or near-real-time data ingestion and processing capabilities.
+3. Data Security and Governance: Enhance security and governance frameworks to comply with industry standards.
