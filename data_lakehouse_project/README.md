@@ -53,7 +53,7 @@ Staging models clean and standardize the raw data to prepare it for more complex
 
 The project ensures a clear data lineage using dbt's documentation and visualization capabilities.
 
-![Data Lineage](screenshots/data_lineage.png)
+![Data Lineage](screenshots/lineage_graph.png)
 
 Testing
 We use a combination of schema tests and custom tests to ensure data quality.
@@ -63,7 +63,7 @@ unique: Ensures the uniqueness of primary keys in dimension tables (e.g., client
 not_null: Verifies that essential fields like transaction_id, client_id, and asset_id are not null.
 accepted_values: Ensures that values for certain columns (e.g., risk_profile, transaction_type) are within an acceptable range.
 
-![Data Quality Tests](screenshots/tests.png)
+![Data Quality Tests](screenshots/tests.jpg)
 
 Future Enhancements
 Additional Fact Models: Plan to include new fact models for deeper financial analysis.
