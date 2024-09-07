@@ -1,0 +1,69 @@
+# models/schema.yml
+
+version: 2
+
+models:
+  - name: dim_clients
+    description: "Dimension table for clients"
+    columns:
+      - name: client_id
+        description: "Unique identifier for each client"
+        tests:
+          - unique        # Check that client_id is unique
+          - not_null      # Check that client_id is not NULL
+      - name: investment_goal
+        description: "Client's investment goal"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Growth', 'Income', 'Balanced']  # Ensure values are within specified list
+      - name: risk_profile
+        description: "Client's risk profile"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Conservative', 'Moderate', 'Aggressive']  # Ensure values are within specified list
+
+  - name: dim_assets
+    description: "Dimension table for assets"
+    columns:
+      - name: asset_id
+        description: "Unique identifier for each asset"
+        tests:
+          - unique        # Check that asset_id is unique
+          - not_null      # Check that asset_id is not NULL
+      - name: asset_type
+        description: "Type of asset"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['equity', 'bond', 'real_estate', 'commodity']  # Ensure values are within specified list
+
+  - name: fact_transactions
+    description: "Fact table for transactions"
+    columns:
+      - name: transaction_id
+        description: "Unique identifier for each transaction"
+        tests:
+          - unique        # Check that transaction_id is unique
+          - not_null      # Check that transaction_id is not NULL
+      - name: client_id
+        description: "Identifier linking to the client"
+        tests:
+          - not_null
+          - relationships:  # Ensure each client_id in fact_transactions exists in dim_clients
+              to: ref('dim_clients')
+              field: client_id
+      - name: asset_id
+        description: "Identifier linking to the asset"
+        tests:
+          - not_null
+          - relationships:  # Ensure each asset_id in fact_transactions exists in dim_assets
+              to: ref('dim_assets')
+              field: asset_id
+      - name: transaction_type
+        description: "Type of transaction (Buy, Sell, Dividend, Interest)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Buy', 'Sell', 'Dividend', 'Interest']  # Ensure values are within specified list

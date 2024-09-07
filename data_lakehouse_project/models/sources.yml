@@ -1,0 +1,14 @@
+# models/sources.yml
+
+version: 2  # YAML versioning for dbt
+
+sources:
+  - name: lakehouse  
+    schema: default
+    tables:
+      - name: clients  
+        description: "Raw data for clients."  
+      - name: assets  
+        description: "Raw data for assets."  
+      - name: transactions 
+        description: "Raw data for transactions."  
