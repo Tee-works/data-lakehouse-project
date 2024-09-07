@@ -39,28 +39,28 @@ The project uses synthetic datasets that simulate real-world scenarios to analyz
 1. AWS S3 Buckets
 Bucket Setup: Raw data is stored in AWS S3, organized into different folders for various datasets such as clients, assets, and transactions.
 
-![S3 bucket](screenshots/s3-1.png)
+![S3 bucket](screenshots/s3-1.jpg)
 
-![S3 bucket](screenshots/S3-2.png)
+![S3 bucket](screenshots/S3-2.jpg)
 
 2. Apache Iceberg and Hive Table Creation in Starburst
 Iceberg Table Creation: Data is organized into Apache Iceberg tables in Starburst Galaxy for better performance and scalability.
 
 Example Iceberg Table Creation Query:
 
-![Iceberg Table Creation Query](screenshots/starburst-iceberg-creation-query.png)
+![Iceberg Table Creation Query](screenshots/starburst-iceberg-creation-query.jpg)
 
 Hive External Table Creation: Hive external tables are used for ingesting raw data into Iceberg tables.
 
 Example Hive Table Creation Query:
 
-![Hive Table Creation Query](screenshots/starburst-hive-creation-query.png)
+![Hive Table Creation Query](screenshots/starburst-hive-creation-query.jpg)
 
-![Iceberg Table Data Insertion Query](screenshots/starburst-insert-into-iceberg-query.png)
+![Iceberg Table Data Insertion Query](screenshots/starburst-insert-into-iceberg-query.jpg)
 
 3. Data Transformation with dbt
 
-![DBT connection](screenshots/dbt-connection.png)
+![DBT connection](screenshots/dbt-connection.jpg)
 
 Staging Models: Clean and standardize raw data to make it ready for transformation.
 
@@ -74,12 +74,12 @@ Advanced Transformations: Implement complex transformations using window functio
 4. Data Pipeline Orchestration with Dagster
 Pipeline Setup: Dagster is used to orchestrate the entire data pipeline, from data ingestion to transformation and reporting.
 
-![Dagit](screenshots/dagit.png)
+![Dagit](screenshots/dagit.jpg)
 
 5. Testing and Validation
 Data Quality Checks: Implement schema tests and custom tests to ensure data integrity and quality.
 
-![Data Quality Tests](screenshots/tests.png)
+![Data Quality Tests](screenshots/tests.jpg)
 
 6. Documentation and Lineage
 dbt Docs: Generate and visualize data lineage using dbt docs to understand the flow of data through different models.
