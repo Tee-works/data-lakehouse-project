@@ -84,7 +84,7 @@ Data Quality Checks: Implement schema tests and custom tests to ensure data inte
 6. Documentation and Lineage
 dbt Docs: Generate and visualize data lineage using dbt docs to understand the flow of data through different models.
 
-![Data Lineage](screenshots/data_lineage.jpg)
+![Data Lineage](screenshots/lineage_graph.png)
 
 ## Future Enhancements
 1. Machine Learning Integration: Plan to integrate machine learning models for predictive analytics and real-time decision-making.
